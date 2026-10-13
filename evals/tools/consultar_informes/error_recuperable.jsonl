@@ -1,0 +1,1 @@
+{"case_id":"LECTURA_ERROR","tool_id":"consultar_informes_defecto","role":"analyst","input":{"page_size":0},"expect":{"ok":false,"error_code":"schema_invalid","category":"ERROR_ARGUMENTOS","recoverable":true,"retry_policy":"retry_once_with_change"}}

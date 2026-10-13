@@ -1,0 +1,1 @@
+{"case_id":"LECTURA_LIMITE","tool_id":"consultar_informes_defecto","role":"analyst","input":{"page_size":1,"cursor":0},"expect":{"ok":true,"total_disponible":3,"devueltos":1,"truncado":true,"cursor_siguiente":1,"items_count":1}}

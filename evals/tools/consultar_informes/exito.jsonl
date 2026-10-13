@@ -1,0 +1,1 @@
+{"case_id":"LECTURA_EXITO","tool_id":"consultar_informes_defecto","role":"analyst","input":{"report_ids":["DEF-001"]},"expect":{"ok":true,"total_disponible":1,"devueltos":1,"truncado":false,"cursor_siguiente":null,"items_count":1}}

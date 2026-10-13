@@ -1,0 +1,1 @@
+{"case_id":"ESCRITURA_EXITO","tool_id":"registrar_prueba_defecto","role":"writer","input":{"report_id":"DEF-001","case_id":"TC-S05-A1","idempotency_key":"DEF-001:TC-S05-A1","assertion":"accepts_without_optional_comment","preview_lines":10},"expect":{"ok":true,"effect":"created","truncado":false,"artifact_path":"WORK/tests/TC-S05-A1.py","total_disponible":6,"devueltos":6}}

@@ -1,0 +1,1 @@
+{"case_id":"ESCRITURA_ERROR","tool_id":"registrar_prueba_defecto","role":"writer","input":{"report_id":"DEF-001","case_id":"TC-S05-A2","idempotency_key":"DEF-002:TC-S05-A2","assertion":"accepts_without_optional_comment"},"expect":{"ok":false,"error_code":"invalid_idempotency_key","category":"ERROR_ARGUMENTOS","recoverable":true,"retry_policy":"retry_once_with_change"}}
