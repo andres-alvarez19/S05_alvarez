@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "ok": {
+      "const": true
+    },
+    "items": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "report_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "observed": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "report_id",
+          "title",
+          "source",
+          "expected",
+          "observed",
+          "target"
+        ]
+      }
+    },
+    "total_disponible": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "devueltos": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cursor_siguiente": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "truncado": {
+      "type": "boolean"
+    },
+    "como_refinar": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "ok",
+    "items",
+    "total_disponible",
+    "devueltos",
+    "cursor_siguiente",
+    "truncado",
+    "como_refinar"
+  ]
+}

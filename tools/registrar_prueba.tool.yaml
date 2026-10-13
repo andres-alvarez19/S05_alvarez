@@ -1,0 +1,21 @@
+tool:
+  id: registrar_prueba_defecto
+  version: "1.0.0"
+  purpose: "Devuelve la ruta y la vista previa acotada del archivo pytest creado en WORK/tests para reproducir DEF-001, o el efecto replayed sin duplicar escritura."
+  cardinality: "one artifact per case_id"
+  when_to_use: "Registrar un caso de prueba autorizado tras consultar evidencia suficiente del defecto."
+  when_not_to_use: "No consultar defectos ni modificar OUTPUT; usar consultar_informes_defecto para lectura."
+  effect: write_sandbox
+  authorization: "role:writer"
+  input_schema_ref: schemas/tools/registrar_prueba.in.json
+  output_schema_ref: schemas/tools/registrar_prueba.out.json
+  error_schema_ref: schemas/tools/error.json
+  idempotency: "clave obligatoria = report_id:case_id; artefacto write-once, repetición idéntica ⇒ replayed"
+  timeout_ms: 15000
+  retries: "solo una vez con parámetros corregidos para errores recuperables"
+  cache_policy: "sin caché; write-once + comprobación de contenido"
+  response_cap: { default_preview_lines: 6, absolute_preview_lines: 40, on_overflow: truncate_and_flag }
+  sandbox: "solo WORK/tests; nunca INPUT, OUTPUT ni red"
+  logs_and_redaction: [tool_id, report_id, case_id, effect, error_code]
+  stop_on: [schema_invalid, write_once_conflict, policy_denied]
+  error_contract: { style: data_not_exception, elements: [category, cause, next_action, retry_policy] }

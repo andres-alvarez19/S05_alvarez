@@ -1,0 +1,14 @@
+{
+  "work_order_id": "WO-2026-922-01",
+  "project_id": "PRJ-2026-922",
+  "nivel": "T1",
+  "objective": "Convertir informes de defectos admitidos en casos de prueba ejecutables; abstenerse si no existe evidencia verificable.",
+  "no_objectives": [
+    "Cambiar código de producción",
+    "Enviar datos a sistemas externos",
+    "Modificar INPUT sellado"
+  ],
+  "source_repository": "https://github.com/andres-alvarez19/S04_Alvarez",
+  "authorized_workspace": "WORK/tests",
+  "source_sample": "INPUT/raw/defect_report_sample.md"
+}

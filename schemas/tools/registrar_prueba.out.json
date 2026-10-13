@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "ok": {
+      "const": true
+    },
+    "artifact_path": {
+      "type": "string",
+      "pattern": "^WORK/tests/TC-[A-Z0-9-]+\\.py$"
+    },
+    "idempotency_key": {
+      "type": "string"
+    },
+    "effect": {
+      "type": "string",
+      "enum": [
+        "created",
+        "replayed"
+      ]
+    },
+    "preview": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 40
+    },
+    "total_disponible": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "devueltos": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cursor_siguiente": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "truncado": {
+      "type": "boolean"
+    },
+    "como_refinar": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "ok",
+    "artifact_path",
+    "idempotency_key",
+    "effect",
+    "preview",
+    "total_disponible",
+    "devueltos",
+    "cursor_siguiente",
+    "truncado",
+    "como_refinar"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "default": "deny",
+  "roles": {
+    "analyst": [
+      "consultar_informes_defecto"
+    ],
+    "writer": [
+      "registrar_prueba_defecto"
+    ]
+  },
+  "tools": [
+    {
+      "id": "consultar_informes_defecto",
+      "version": "1.0.0",
+      "effect": "read_only",
+      "definition": "tools/consultar_informes.tool.yaml"
+    },
+    {
+      "id": "registrar_prueba_defecto",
+      "version": "1.0.0",
+      "effect": "write_sandbox",
+      "definition": "tools/registrar_prueba.tool.yaml"
+    }
+  ],
+  "approval_required": [
+    "external_write",
+    "irreversible_effect"
+  ],
+  "external_capabilities": "politica_capacidades.json"
+}

@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "ok": {
+      "const": false
+    },
+    "error_code": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "ERROR_ARGUMENTOS",
+        "ERROR_ESTADO",
+        "ERROR_LIMITE",
+        "ERROR_PERMISO",
+        "ERROR_BUCLE"
+      ]
+    },
+    "cause": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "received": {
+          "type": "string"
+        },
+        "expected": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "received",
+        "expected"
+      ]
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 5
+    },
+    "retry_policy": {
+      "type": "string",
+      "enum": [
+        "retry_once_with_change",
+        "never",
+        "retry_up_to_2_transient"
+      ]
+    },
+    "recoverable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "ok",
+    "error_code",
+    "category",
+    "cause",
+    "next_action",
+    "retry_policy",
+    "recoverable"
+  ]
+}

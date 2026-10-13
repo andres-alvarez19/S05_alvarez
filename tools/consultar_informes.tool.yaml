@@ -1,0 +1,21 @@
+tool:
+  id: consultar_informes_defecto
+  version: "1.0.0"
+  purpose: "Devuelve entre cero y tres informes de defecto del conjunto autorizado, filtrados por identificadores, con paginación y total disponible."
+  cardinality: "multiple (0..3 por página)"
+  when_to_use: "Consultar evidencia de defectos, uno o varios IDs, sin cambiar archivos."
+  when_not_to_use: "Nunca para guardar una prueba; usar registrar_prueba_defecto."
+  effect: read_only
+  authorization: "role:analyst"
+  input_schema_ref: schemas/tools/consultar_informes.in.json
+  output_schema_ref: schemas/tools/consultar_informes.out.json
+  error_schema_ref: schemas/tools/error.json
+  idempotency: "natural: mismos filtros y sello INPUT ⇒ mismo conjunto"
+  timeout_ms: 15000
+  retries: "solo si se corrigen argumentos; nunca repetir error idéntico"
+  cache_policy: "clave = herramienta@version + entrada + sha256(INPUT/raw/defect_reports.json)"
+  response_cap: { default_page_size: 2, absolute_page_size: 3, on_overflow: paginate_and_flag }
+  sandbox: "INPUT/raw de solo lectura"
+  logs_and_redaction: [tool_id, report_ids_count, returned_count, error_code]
+  stop_on: [schema_invalid, input_path_violation]
+  error_contract: { style: data_not_exception, elements: [category, cause, next_action, retry_policy] }

@@ -1,0 +1,29 @@
+{
+  "classification": "synthetic_lab",
+  "records": [
+    {
+      "report_id": "DEF-001",
+      "title": "El conversor rechaza una entrada válida con campo opcional ausente",
+      "source": "defect_report_sample.md",
+      "expected": "Una entrada sin comment opcional se acepta",
+      "observed": "Error de validación al faltar comment",
+      "target": "conversor.opcional"
+    },
+    {
+      "report_id": "DEF-002",
+      "title": "Caso sintético: transformación de cadena vacía",
+      "source": "sintetico_s05",
+      "expected": "Se conserva cadena vacía",
+      "observed": "Se transforma a null",
+      "target": "conversor.opcional"
+    },
+    {
+      "report_id": "DEF-003",
+      "title": "Caso sintético: longitud del identificador",
+      "source": "sintetico_s05",
+      "expected": "Se rechazan identificadores largos",
+      "observed": "No se valida longitud",
+      "target": "conversor.opcional"
+    }
+  ]
+}
