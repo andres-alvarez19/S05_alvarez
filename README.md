@@ -46,9 +46,11 @@ Las seis pruebas JSONL se ejecutan en directorios temporales, sin alterar INPUT 
 
 **Evidencia confirmada por GitHub Actions:** [ejecución de validación](https://github.com/andres-alvarez19/S05_alvarez/actions/runs/38484917942), `RESULTADO: 6/6 casos válidos`; `12 passed in 0.30s`. La salida se conserva literalmente en `bitacora.md`.
 
-## Paso pendiente: auditoría cruzada
+## Estado de la auditoría cruzada — NO REALIZADA
 
-Entregar a un compañero las dos fichas de `tools/` junto al manifiesto y schemas referenciados. Solicitar su catálogo; sin pedir explicaciones, resolver en `auditoria.md` los tres escenarios de la consigna y un hallazgo concreto del punto 11 o 12 con consecuencia y corrección. Incorporar también la revisión del compañero sobre nuestro catálogo. No se inventan auditorías externas. **La actividad está lista para ese intercambio, no completamente cerrada hasta recibirlo.**
+No fue posible conseguir una contraparte para la revisión cruzada. Por ello **no se realizó la auditoría de un catálogo ajeno ni se recibió retroalimentación humana sobre este catálogo**. Los tres escenarios y el análisis de los puntos 11/12 no se presentan como ejecutados con un compañero. Esta ausencia se consigna expresamente como **requisito de la ronda 3 sin cumplir**, no como un resultado satisfactorio ni una auditoría sustituida por IA.
+
+**Estado de presentación:** el repositorio reúne los artefactos técnicos desarrollados, la documentación y las pruebas automatizadas, y puede presentarse con esta salvedad; la rúbrica o el docente podrían descontar el criterio de revisión cruzada. La falta del catálogo oficial de cinco capacidades continúa cubierta mediante un escenario simulado explícitamente no oficial, cuya aceptación también queda a criterio del docente.
 
 ## Límite de seguridad del laboratorio
 
