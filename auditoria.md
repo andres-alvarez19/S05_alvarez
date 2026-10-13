@@ -43,15 +43,16 @@ La tabla 5.0 de la guía solo proporciona siete nombres y descripciones, no esqu
 
 **consultar_informes_defecto** devuelve colecciones paginadas y no escribe. **registrar_prueba_defecto** crea un artefacto pytest en WORK/tests de forma idempotente y no consulta. Disparadores diferenciados; permisos segregados en tools/tools.manifest.json. Evidencia para los doce puntos: fichas YAML, schemas, implementación y seis JSONL.
 
-## R3 · Auditoría cruzada — PENDIENTE
+## R3 · Auditoría cruzada — NO REALIZADA
 
-No se ha recibido catálogo ajeno. Completar sin consultar a su autor:
+**Motivo:** no fue posible conseguir revisión cruzada con otro estudiante. No se obtuvo catálogo de un compañero ni se recibió retroalimentación sobre nuestras herramientas. No se han simulado dictámenes humanos ni atribuido resultados inexistentes.
 
-| Escenario de la guía | Herramienta elegida | Justificación leyendo solo catálogo |
-|---|---|---|
-| Consultar por un identificador conocido | PENDIENTE | PENDIENTE |
-| Consultar varios elementos que cumplen condición | PENDIENTE | PENDIENTE |
-| Usuario: «ya no necesito ayuda» | PENDIENTE | PENDIENTE |
+| Escenario exigido | Resultado |
+|---|---|
+| Consulta por identificador conocido | No evaluado: sin catálogo externo |
+| Consulta de varios elementos filtrados | No evaluado: sin catálogo externo |
+| «El usuario ya no necesita ayuda» | No evaluado: sin catálogo externo |
+| Punto 11 o 12, consecuencia y propuesta para catálogo ajeno | No evaluado: sin catálogo externo |
+| Revisión recibida del propio catálogo | No recibida |
 
-Hallazgo de conjunto de punto 11 o 12, consecuencia y corrección específica: **PENDIENTE**.
-Retroalimentación de compañero sobre nuestro catálogo: **PENDIENTE**.
+**Alcance de la entrega:** se conserva la auditoría del catálogo sembrado (R1) y el análisis interno de nuestras herramientas. **R3 no está cumplida**; se solicita al evaluador considerar la imposibilidad de intercambio documentada, sin afirmar que esto dispense el requisito.
