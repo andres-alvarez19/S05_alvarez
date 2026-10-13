@@ -1,0 +1,59 @@
+{
+  "scenario": "SIMULADO_NO_OFICIAL",
+  "default": "deny",
+  "operational_external_access": false,
+  "server_allowlist": [],
+  "simulated_candidate_allowlist": [
+    {
+      "server_id": "mcp-panol-demo",
+      "server_version_pin": "0.1.0-simulado",
+      "capability_id": "fetch_issue",
+      "version_pin": "1.0.0-simulado",
+      "allowed_agents": [
+        "analyst"
+      ],
+      "data_classification_max": "internal",
+      "effect": "read_only"
+    }
+  ],
+  "denied_capabilities": [
+    {
+      "id": "search_code",
+      "reason": "instruction_override_in_tool_description",
+      "action": "quarantine_before_registration"
+    },
+    {
+      "id": "publish_report",
+      "reason": "side_effect_mismatch",
+      "action": "deny_and_review_contract"
+    },
+    {
+      "id": "export_secrets",
+      "reason": "not_needed_sensitive_export",
+      "action": "deny"
+    },
+    {
+      "id": "run_shell",
+      "reason": "not_needed_arbitrary_execution",
+      "action": "deny"
+    }
+  ],
+  "pre_gate": [
+    "need_is_justified",
+    "agent_is_authorized",
+    "server_and_capability_version_pinned",
+    "description_has_no_instruction_override",
+    "input_schema_valid",
+    "data_minimized",
+    "budget_available"
+  ],
+  "post_gate": [
+    "output_schema_valid",
+    "no_instruction_override",
+    "relevance_and_freshness",
+    "side_effect_matches_declaration"
+  ],
+  "on_pre_gate_failure": "deny_and_log",
+  "on_post_gate_failure": "quarantine_and_abstain",
+  "audit_note": "No hay servidor oficial proporcionado. Los permisos candidatos solo ilustran el análisis y NO habilitan conexiones reales."
+}
