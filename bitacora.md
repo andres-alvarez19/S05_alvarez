@@ -17,7 +17,7 @@ Las fichas están en tools/*.tool.yaml, esquemas JSON en schemas/tools y permiso
 
 ## R3 · Auditoría cruzada
 
-**PENDIENTE DE RECIBIR EL CATÁLOGO DEL COMPAÑERO.** El trabajo propio puede someterse a auditoría externa. La tabla para los tres escenarios obligatorios y el hallazgo de puntos 11/12 quedan explícitamente pendientes en `auditoria.md`. No se atribuye una revisión inexistente ni se sustituye por un modelo.
+**NO REALIZADA POR IMPOSIBILIDAD DE CONSEGUIR REVISIÓN CRUZADA.** No se obtuvo catálogo de un compañero ni retroalimentación sobre el propio. Los tres escenarios y el hallazgo de puntos 11/12 de un catálogo ajeno no pudieron ejecutarse. Se registra la limitación sin inventar contraparte, conclusiones ni evidencias. Este criterio de la actividad queda sin cumplir.
 
 ## R4 · Errores y reintentos
 
@@ -54,4 +54,4 @@ La batería incluye aserción de detección del defecto sobre la ruta real `targ
 
 ## Estado de entrega
 
-**Lista para la auditoría cruzada externa, no entrega final completa**: falta la revisión del catálogo de un compañero y la retroalimentación que ese compañero haga del nuestro. El caso de cinco capacidades es hipotético por ausencia de material oficial y se advierte en README.
+**Entrega técnica preparada para presentar con salvedades:** las pruebas automatizadas y los entregables implementados están documentados; **R3 (revisión cruzada humana) no se realizó** por no conseguir contraparte, por lo que no puede considerarse requisito cumplido. El caso de cinco capacidades de R5 es hipotético por ausencia de material oficial, identificado expresamente en README. El cumplimiento total y cualquier descuento dependen de la evaluación docente.
